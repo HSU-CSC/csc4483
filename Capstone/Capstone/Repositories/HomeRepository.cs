@@ -1,6 +1,6 @@
 ﻿using Capstone.Models;
-using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.WebControls;
 
 namespace Capstone.Repositories
 {
@@ -13,9 +13,11 @@ namespace Capstone.Repositories
             _EfDbContext = new EfDbContext();
         }
 
-        public IEnumerable<Point> getImage(string macAddress)
+        public ImageMap getImage(string macAddress)
         {
             var deviceId = _EfDbContext.Devices.FirstOrDefault(d => d.MacAddress == macAddress);
+
+            return null;
         }
     }
 }
