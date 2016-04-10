@@ -14,7 +14,7 @@ namespace Capstone.Services
             _HomeRepository = new HomeRepository();
         }
 
-        public ImageMap getImageMap(string macAddress)
+        public System.Web.UI.WebControls.ImageMap getImageMap(string macAddress)
         {
             var image = new System.Web.UI.WebControls.ImageMap();
             var imageInfo = _HomeRepository.getImageMap(macAddress);
