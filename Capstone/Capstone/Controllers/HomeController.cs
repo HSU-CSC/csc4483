@@ -12,7 +12,7 @@ namespace Capstone.Controllers
             _HomeService = new HomeService();
         }
 
-        [Route("{macAddress:string}")]
+        [Route("~/start/{macAddress}")]
         public ActionResult Index(string macAddress)
         {
             var image = _HomeService.getImageMap(macAddress);
