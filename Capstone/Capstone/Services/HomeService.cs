@@ -1,5 +1,7 @@
 ﻿using Capstone.Repositories;
 using System.Web.UI.WebControls;
+using System.Linq;
+using Capstone.Models.Home;
 
 namespace Capstone.Services
 {
@@ -12,11 +14,18 @@ namespace Capstone.Services
             _HomeRepository = new HomeRepository();
         }
 
-        public ImageMap getImage(string macAddress)
+        public ImageMap getImageMap(string macAddress)
         {
-            var image = new ImageMap();
+            var image = new System.Web.UI.WebControls.ImageMap();
+            var imageInfo = _HomeRepository.getImageMap(macAddress);
+            var regions = _HomeRepository.getImageMapRegions(imageInfo.Id);
 
-            // TODO: Get the image data and put into object.
+            foreach (var r in regions)
+            {
+                image.HotSpots.Add(new RectangleHotSpot { Left = r.TopLeftX, Top = r.TopLeftY, Right = r.BottomRightX, Bottom = r.BottomRightY, NavigateUrl = r.PostbackURL});
+            }
+
+            image.ImageUrl = imageInfo.ImageFile;
 
             return image;
         }
