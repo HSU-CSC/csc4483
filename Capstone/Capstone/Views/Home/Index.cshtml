@@ -1,12 +1,12 @@
-﻿@using System.Web.UI.WebControls
+﻿@model Capstone.Models.Home.ImageMap
 
-@model ImageMap
+<img src="@Model.ImageFile" usemap="#map"/>
 
-@Model.Load
+<map name="map">
+    @foreach(var r in Model.Regions)
+    {
+        var coords = r.TopLeftX + "," + r.TopLeftY + "," + r.BottomRightX + "," + r.BottomRightY;
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
-
+        <area shape="rect" coords="@coords" href="@r.Url" alt=""/>
+    }
+</map>

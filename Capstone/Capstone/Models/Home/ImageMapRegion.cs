@@ -40,6 +40,6 @@ namespace Capstone.Models.Home
         /// <summary>
         /// The link to where the region goes when clicked.
         /// </summary>
-        public string PostbackURL { get; set; }
+        public string Url { get; set; }
     }
 }

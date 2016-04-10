@@ -1,4 +1,7 @@
-﻿namespace Capstone.Models.Home
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Capstone.Models.Home
 {
     public class ImageMap
     {
@@ -16,5 +19,11 @@
         /// The file name of the image.
         /// </summary>
         public string ImageFile { get; set; }
+
+        /// <summary>
+        /// The regions of the image map.
+        /// </summary>
+        [NotMapped]
+        public IEnumerable<ImageMapRegion> Regions { get; set; }
     }
 }
