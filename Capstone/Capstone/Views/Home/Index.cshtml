@@ -1,6 +1,10 @@
 ﻿@model Capstone.Models.Home.ImageMap
 
-<img src="@Model.ImageFile" usemap="#map"/>
+@{ 
+    var imagePath = "/Resources/Images/" + Model.ImageFile;
+}
+
+<img src="@imagePath" usemap="#map"/>
 
 <map name="map">
     @foreach(var r in Model.Regions)
