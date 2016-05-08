@@ -7,7 +7,10 @@
     <link href="css/cupertino/jquery-ui-1.10.3.min.css" rel="stylesheet" type="text/css" />
     <link href="fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
     <link href="css/jquery.qtip-2.2.0.css" rel="stylesheet" type="text/css" />
-
+    
+    <link href="css/keyboard.css" rel="stylesheet" type="text/css" />
+    <script src="jquery/keyboard.js" type="text/javascript" charset="UTF-8"></script>
+    
     <script src="jquery/moment-2.8.1.min.js" type="text/javascript"></script>
     <script src="jquery/jquery-2.1.1.js" type="text/javascript"></script>
     <script src="jquery/jquery-ui-1.11.1.js" type="text/javascript"></script>
@@ -74,13 +77,13 @@
                 <td class="alignRight">
                     Name:</td>
                 <td class="alignLeft">
-                    <input id="eventName" type="text" /><br /></td>
+                    <input id="eventName" type="text" class="keyboardInput" /><br /></td>
             </tr>
             <tr>
                 <td class="alignRight">
                     Description:</td>
                 <td class="alignLeft">
-                    <textarea id="eventDesc" cols="30" rows="3" ></textarea></td>
+                    <textarea id="eventDesc" cols="30" rows="3" class="keyboardInput" ></textarea></td>
             </tr>
             <tr>
                 <td class="alignRight">
@@ -102,13 +105,13 @@
                 <td class="alignRight">
                     Name:</td>
                 <td class="alignLeft">
-                    <input id="addEventName" type="text" size="50" /><br /></td>
+                    <input id="addEventName" type="text" size="40" class="keyboardInput" /><br /></td>
             </tr>
             <tr>
                 <td class="alignRight">
                     Description:</td>
                 <td class="alignLeft">
-                    <textarea id="addEventDesc" cols="30" rows="3" ></textarea></td>
+                    <textarea id="addEventDesc" cols="30" rows="3" class="keyboardInput" ></textarea></td>
             </tr>
             <tr>
                 <td class="alignRight">
