@@ -1,7 +1,9 @@
-﻿using Capstone.Models;
+﻿using System;
+using Capstone.Models;
 using Capstone.Models.Home;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Capstone.Repositories
 {
@@ -28,5 +30,36 @@ namespace Capstone.Repositories
 
             return regions;
         }
+        
+        public Feed getFeed(int deviceId)
+        {
+            try
+            {
+                var data = _EfDbContext.Feeds.FirstOrDefault(d => d.DeviceId == deviceId);
+                return data;
+            }
+            catch (NullReferenceException ex)
+            {
+                throw new NullReferenceException("null reference");
+            }
+            
+        }
+
+        public FeedData getFeedData(Feed data)
+        {
+            try
+            {
+                var info = _EfDbContext.FeedDatas.FirstOrDefault(d => d.Id == data.Id);
+
+                return info;
+            }
+            catch (NullReferenceException ex)
+            {
+                throw new NullReferenceException("null reference");
+            }
+        }
+
+
+       
     }
 }

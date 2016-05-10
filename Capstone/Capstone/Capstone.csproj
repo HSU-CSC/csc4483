@@ -68,6 +68,10 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -144,6 +148,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\FeedReader.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,6 +170,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EfDbContext.cs" />
     <Compile Include="Models\Home\Device.cs" />
+    <Compile Include="Models\Home\Feed.cs" />
+    <Compile Include="Models\Home\FeedReader.cs" />
+    <Compile Include="Models\Home\FeedData.cs" />
     <Compile Include="Models\Home\ImageMap.cs" />
     <Compile Include="Models\Home\ImageMapRegion.cs" />
     <Compile Include="Models\Home\Organization.cs" />

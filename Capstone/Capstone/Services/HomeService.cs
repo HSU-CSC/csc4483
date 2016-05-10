@@ -19,5 +19,20 @@ namespace Capstone.Services
 
             return image;
         }
+
+        public Feed getFeed(int deviceId)
+        {
+            var data = _HomeRepository.getFeed(deviceId);
+
+            return data;
+        }
+
+        public FeedData getFeedData(Feed data)
+        {
+
+            var info = _HomeRepository.getFeedData(data);
+
+            return info;
+        }
     }
 }

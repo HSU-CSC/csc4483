@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Capstone.Models.Home.FeedData>
+
+@{
+    ViewBag.Title = "FeedReader";
+}
+<head>
+    
+        @Styles.Render("~/Content/css")
+  
+</head>
+<h2>News Feed</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            Title
+        </div>
+        <div class="col-md-4">
+            Publish Date
+        </div>
+    </div>
+
+            @foreach (var item in Model)
+            {
+                <div class="row" >
+                    <div class="col-md-4">
+
+                        <span title="@System.Web.HttpUtility.HtmlDecode(item.Description)"><a href="@item.Link" target="_blank">@Html.Encode(item.Title)</a></span>
+
+                    </div>
+                    <div class="col-md-4">
+
+                        @System.Web.HttpUtility.HtmlDecode(item.PublishDate)
+
+                    </div>
+                </div>
+            }
+
+
+

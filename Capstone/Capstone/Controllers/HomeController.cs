@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Capstone.Models.Home;
 using Capstone.Services;
 
 namespace Capstone.Controllers
@@ -18,6 +19,17 @@ namespace Capstone.Controllers
             var image = _HomeService.getImageMap(macAddress);
 
             return View(image);
+        }
+
+
+       public ActionResult FeedReader(int deviceId)
+        {
+            Feed data = _HomeService.getFeed(deviceId);
+            FeedData info = _HomeService.getFeedData(data);
+           string Url = info.FeedUrl;
+
+           ViewData.Model = Url;
+           return View();
         }
     }
 }
