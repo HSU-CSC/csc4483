@@ -1,0 +1,30 @@
+==Horitzontal Image--
+
+=Calendar Button=
+139, 283
+701, 657
+
+=News Feed Button=
+982, 283
+1544, 657
+
+=HSU Logo=
+577, 0
+1181, 135
+
+
+
+==Verticle Image==
+
+=Calendar Button=
+238, 323
+802, 697
+
+=News Feed Button=
+238, 934
+803, 1380
+
+=HSU Logo=
+200, 0
+812, 165
+
